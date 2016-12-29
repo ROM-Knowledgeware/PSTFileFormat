@@ -1,0 +1,215 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5A7971B-86B5-44A7-B91B-5C276C891E9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSTFileFormat</RootNamespace>
+    <AssemblyName>PSTFileFormat</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CalendarShare-Client\Components\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ListsTablesAndProperties\BTreeOnHeap\BTreeOnHeap.cs" />
+    <Compile Include="ListsTablesAndProperties\BTreeOnHeap\BTreeOnHeapDataRecord.cs" />
+    <Compile Include="ListsTablesAndProperties\BTreeOnHeap\BTreeOnHeapHeader.cs" />
+    <Compile Include="ListsTablesAndProperties\BTreeOnHeap\BTreeOnHeapIndex.cs" />
+    <Compile Include="ListsTablesAndProperties\BTreeOnHeap\BTreeOnHeapIndexRecord.cs" />
+    <Compile Include="ListsTablesAndProperties\BTreeOnHeap\BTreeOnHeapLeaf.cs" />
+    <Compile Include="ListsTablesAndProperties\Enums\OnHeapTypeName.cs" />
+    <Compile Include="ListsTablesAndProperties\Enums\PropertyID.cs" />
+    <Compile Include="ListsTablesAndProperties\Enums\PropertyTypeName.cs" />
+    <Compile Include="ListsTablesAndProperties\Exceptions\MissingSubnodeException.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapID.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\BlockData\HeapOnNodeBitmapBlockData.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\BlockData\HeapOnNodeBlockData.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\BlockData\HeapOnNodeFirstBlockData.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\BlockData\HeapOnNodePageBlockData.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\Header\HeapOnNodeBitmapHeader.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\Header\HeapOnNodeHeader.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\Header\HeapOnNodePageHeader.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\HeapOnNode.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\HeapOnNodeHelper.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOnNode\HeapOnNodePageMap.cs" />
+    <Compile Include="ListsTablesAndProperties\HeapOrNodeID.cs" />
+    <Compile Include="ListsTablesAndProperties\NodeStorageHelper.cs" />
+    <Compile Include="ListsTablesAndProperties\PropertyContext\NamedPropertyContext.cs" />
+    <Compile Include="ListsTablesAndProperties\PropertyContext\PropertyContext.cs" />
+    <Compile Include="ListsTablesAndProperties\PropertyContext\PropertyContextHelper.cs" />
+    <Compile Include="ListsTablesAndProperties\PropertyContext\PropertyContextRecord.cs" />
+    <Compile Include="ListsTablesAndProperties\PropertyContext\PtypObjectRecord.cs" />
+    <Compile Include="ListsTablesAndProperties\Tables\NamedTableContext.cs" />
+    <Compile Include="ListsTablesAndProperties\Tables\TableColumnDescriptor.cs" />
+    <Compile Include="ListsTablesAndProperties\Tables\TableContext.cs" />
+    <Compile Include="ListsTablesAndProperties\Tables\TableContextHelper.cs" />
+    <Compile Include="ListsTablesAndProperties\Tables\TableContextInfo.cs" />
+    <Compile Include="ListsTablesAndProperties\Tables\TableContextRowID.cs" />
+    <Compile Include="Messaging\Attachments\AttachmentObject.cs" />
+    <Compile Include="Messaging\Attachments\AttachmentTable.cs" />
+    <Compile Include="Messaging\Enums\AttachmentFlags.cs" />
+    <Compile Include="Messaging\Enums\AttachMethod.cs" />
+    <Compile Include="Messaging\Enums\BusyStatus.cs" />
+    <Compile Include="Messaging\Enums\FolderItemTypeName.cs" />
+    <Compile Include="Messaging\Enums\IconIndex.cs" />
+    <Compile Include="Messaging\Enums\Importance.cs" />
+    <Compile Include="Messaging\Enums\MeetingType.cs" />
+    <Compile Include="Messaging\Enums\MessageFlags.cs" />
+    <Compile Include="Messaging\Enums\MessagePriority.cs" />
+    <Compile Include="Messaging\Enums\MessageSensitivity.cs" />
+    <Compile Include="Messaging\Enums\ObjectType.cs" />
+    <Compile Include="Messaging\Enums\PropertyLongID.cs" />
+    <Compile Include="Messaging\Enums\PropertySetGuid.cs" />
+    <Compile Include="Messaging\Enums\RecipientFlags.cs" />
+    <Compile Include="Messaging\Enums\RecipientType.cs" />
+    <Compile Include="Messaging\Enums\SideEffectsFlags.cs" />
+    <Compile Include="Messaging\Enums\TaskMode.cs" />
+    <Compile Include="Messaging\Exceptions\InvalidPropertyException.cs" />
+    <Compile Include="Messaging\Exceptions\InvalidRecurrencePatternException.cs" />
+    <Compile Include="Messaging\Folders\CalendarFolder.cs" />
+    <Compile Include="Messaging\Folders\PSTFolder.cs" />
+    <Compile Include="Messaging\HierarchyTable.cs" />
+    <Compile Include="Messaging\Messages\Appointment.cs" />
+    <Compile Include="Messaging\Messages\ConversationIndexHeader.cs" />
+    <Compile Include="Messaging\Messages\MessageObject.cs" />
+    <Compile Include="Messaging\Messages\MessageObject.Properties.cs" />
+    <Compile Include="Messaging\Messages\ModifiedAppointmentInstance.AppointmentProperties.cs" />
+    <Compile Include="Messaging\Messages\ModifiedAppointmentInstance.cs" />
+    <Compile Include="Messaging\Messages\ModifiedAppointmentInstance.MessageProperties.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\AppointmentRecurrencePatternStructure.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\CalendarHelper.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\DailyRecurrencePatternStructure.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\DateTimeHelper.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\Enums\DayOccurenceNumber.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\Enums\DaysOfWeekFlags.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\Enums\OutlookDayOfWeek.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\Enums\RecurrenceEnums.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\Enums\RecurrenceType.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\ExceptionInfoStructure.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\MonthlyRecurrencePatternStructure.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\RecurrenceTypeHelper.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\WeeklyRecurrencePatternStructure.cs" />
+    <Compile Include="Messaging\Messages\RecurrencePatternStructure\YearlyRecurrencePatternStructure.cs" />
+    <Compile Include="Messaging\Messages\RecurringAppointment.cs" />
+    <Compile Include="Messaging\Messages\SingleAppointment.cs" />
+    <Compile Include="Messaging\Messages\TimeZoneDefinitionStructure\Enums\TimeZoneRuleFlags.cs" />
+    <Compile Include="Messaging\Messages\TimeZoneDefinitionStructure\TimeZoneDefinitionRecurStructure.cs" />
+    <Compile Include="Messaging\Messages\TimeZoneDefinitionStructure\TimeZoneRuleStructure.cs" />
+    <Compile Include="Messaging\Messages\TimeZoneStructure\AdjustmentRuleHelper.cs" />
+    <Compile Include="Messaging\Messages\TimeZoneStructure\TimeZoneStructure.cs" />
+    <Compile Include="Messaging\NamedProperties\NameID.cs" />
+    <Compile Include="Messaging\NamedProperties\PropertyName.cs" />
+    <Compile Include="Messaging\NamedProperties\PropertyNames.cs" />
+    <Compile Include="Messaging\NamedProperties\PropertyNameToIDMap.cs" />
+    <Compile Include="Messaging\Recipients\MessageRecipient.cs" />
+    <Compile Include="Messaging\Recipients\RecipientEntryID.cs" />
+    <Compile Include="Messaging\Recipients\RecipientsTable.cs" />
+    <Compile Include="Messaging\Search\Enums\SearchUpdateDescriptorFlags.cs" />
+    <Compile Include="Messaging\Search\Enums\SearchUpdateDescriptorType.cs" />
+    <Compile Include="Messaging\Search\SearchDomainObject.cs" />
+    <Compile Include="Messaging\Search\SearchManagementQueue.cs" />
+    <Compile Include="Messaging\Search\SearchUpdateDescriptor.cs" />
+    <Compile Include="Messaging\Search\SearchUpdateDescriptorData\SearchUpdateDescriptorData.cs" />
+    <Compile Include="Messaging\Search\SearchUpdateDescriptorData\SearchUpdateDescriptorFolderAdded.cs" />
+    <Compile Include="Messaging\Search\SearchUpdateDescriptorData\SearchUpdateDescriptorFolderModified.cs" />
+    <Compile Include="Messaging\Search\SearchUpdateDescriptorData\SearchUpdateDescriptorMessageAdded.cs" />
+    <Compile Include="NodeDatabse\AllocationHelper.cs" />
+    <Compile Include="NodeDatabse\Block\Block.cs" />
+    <Compile Include="NodeDatabse\Block\BlockID.cs" />
+    <Compile Include="NodeDatabse\Block\BlockRef.cs" />
+    <Compile Include="NodeDatabse\Block\BlockTrailer.cs" />
+    <Compile Include="NodeDatabse\Block\BufferedBlockStore.cs" />
+    <Compile Include="NodeDatabse\BTree\BlockBTree.cs" />
+    <Compile Include="NodeDatabse\BTree\BlockBTreeEntry.cs" />
+    <Compile Include="NodeDatabse\BTree\BlockBTreeLeafPage.cs" />
+    <Compile Include="NodeDatabse\BTree\BTree.cs" />
+    <Compile Include="NodeDatabse\BTree\BTreeIndexEntry.cs" />
+    <Compile Include="NodeDatabse\BTree\BTreeIndexPage.cs" />
+    <Compile Include="NodeDatabse\BTree\BTreePage.cs" />
+    <Compile Include="NodeDatabse\BTree\BufferedBTreePageStore.cs" />
+    <Compile Include="NodeDatabse\BTree\NodeBTree.cs" />
+    <Compile Include="NodeDatabse\BTree\NodeBTreeEntry.cs" />
+    <Compile Include="NodeDatabse\BTree\NodeBTreeLeafPage.cs" />
+    <Compile Include="NodeDatabse\DataTree\DataBlock.cs" />
+    <Compile Include="NodeDatabse\DataTree\DataTree.cs" />
+    <Compile Include="NodeDatabse\DataTree\XBlock.cs" />
+    <Compile Include="NodeDatabse\DataTree\XXBlock.cs" />
+    <Compile Include="NodeDatabse\Enums\bCryptMethodName.cs" />
+    <Compile Include="NodeDatabse\Enums\BlockType.cs" />
+    <Compile Include="NodeDatabse\Enums\InternalNodeName.cs" />
+    <Compile Include="NodeDatabse\Enums\NodeTypeName.cs" />
+    <Compile Include="NodeDatabse\Enums\PageTypeName.cs" />
+    <Compile Include="NodeDatabse\Enums\WriterCompatibilityMode.cs" />
+    <Compile Include="NodeDatabse\Exceptions\InvalidAllocationMapException.cs" />
+    <Compile Include="NodeDatabse\Exceptions\InvalidBlockIDException.cs" />
+    <Compile Include="NodeDatabse\Exceptions\InvalidChecksumException.cs" />
+    <Compile Include="NodeDatabse\Node.cs" />
+    <Compile Include="NodeDatabse\NodeID.cs" />
+    <Compile Include="NodeDatabse\Pages\AllocationMapPage.cs" />
+    <Compile Include="NodeDatabse\Pages\DensityListPage.cs" />
+    <Compile Include="NodeDatabse\Pages\DensityListPageEntry.cs" />
+    <Compile Include="NodeDatabse\Pages\FPMapPage.cs" />
+    <Compile Include="NodeDatabse\Pages\FreeMapPage.cs" />
+    <Compile Include="NodeDatabse\Pages\Page.cs" />
+    <Compile Include="NodeDatabse\Pages\PageTrailer.cs" />
+    <Compile Include="NodeDatabse\Pages\PMapPage.cs" />
+    <Compile Include="NodeDatabse\PSTCRCCalculation.cs" />
+    <Compile Include="NodeDatabse\PSTEncryptionUtils.cs" />
+    <Compile Include="NodeDatabse\PSTHeader.cs" />
+    <Compile Include="NodeDatabse\PSTNode.cs" />
+    <Compile Include="NodeDatabse\RootStructure.cs" />
+    <Compile Include="NodeDatabse\Subnode.cs" />
+    <Compile Include="NodeDatabse\SubnodeBTree\SubnodeBTree.cs" />
+    <Compile Include="NodeDatabse\SubnodeBTree\SubnodeIntermediateBlock.cs" />
+    <Compile Include="NodeDatabse\SubnodeBTree\SubnodeIntermediateEntry.cs" />
+    <Compile Include="NodeDatabse\SubnodeBTree\SubnodeLeafBlock.cs" />
+    <Compile Include="NodeDatabse\SubnodeBTree\SubnodeLeafEntry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSTFile.cs" />
+    <Compile Include="Utils\AdjustmentRuleUtils.cs" />
+    <Compile Include="Utils\AdjustmentRuleUtils.Win32.cs" />
+    <Compile Include="Utils\RegistryTimeZoneUtils.Win32.cs" />
+    <Compile Include="Utils\StringHelper.cs" />
+    <Compile Include="Utils\TimeZoneInfoUtils.cs" />
+    <Compile Include="Utils\TimeZoneInfoUtils.Win32.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{AECB4E91-32AE-4AD1-AE1D-8FDBE33B224D}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

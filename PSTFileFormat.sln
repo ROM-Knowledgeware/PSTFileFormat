@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSTFileFormat", "PSTFileFormat\PSTFileFormat.csproj", "{C5A7971B-86B5-44A7-B91B-5C276C891E9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{AECB4E91-32AE-4AD1-AE1D-8FDBE33B224D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5A7971B-86B5-44A7-B91B-5C276C891E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A7971B-86B5-44A7-B91B-5C276C891E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A7971B-86B5-44A7-B91B-5C276C891E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A7971B-86B5-44A7-B91B-5C276C891E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECB4E91-32AE-4AD1-AE1D-8FDBE33B224D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECB4E91-32AE-4AD1-AE1D-8FDBE33B224D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECB4E91-32AE-4AD1-AE1D-8FDBE33B224D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECB4E91-32AE-4AD1-AE1D-8FDBE33B224D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
