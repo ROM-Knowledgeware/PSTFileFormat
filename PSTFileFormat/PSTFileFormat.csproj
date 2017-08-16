@@ -92,6 +92,7 @@
     <Compile Include="Messaging\Exceptions\InvalidPropertyException.cs" />
     <Compile Include="Messaging\Exceptions\InvalidRecurrencePatternException.cs" />
     <Compile Include="Messaging\Folders\CalendarFolder.cs" />
+    <Compile Include="Messaging\Folders\MailFolder.cs" />
     <Compile Include="Messaging\Folders\PSTFolder.cs" />
     <Compile Include="Messaging\HierarchyTable.cs" />
     <Compile Include="Messaging\Messages\Appointment.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Messaging\Messages\ModifiedAppointmentInstance.AppointmentProperties.cs" />
     <Compile Include="Messaging\Messages\ModifiedAppointmentInstance.cs" />
     <Compile Include="Messaging\Messages\ModifiedAppointmentInstance.MessageProperties.cs" />
+    <Compile Include="Messaging\Messages\Note.cs" />
     <Compile Include="Messaging\Messages\RecurrencePatternStructure\AppointmentRecurrencePatternStructure.cs" />
     <Compile Include="Messaging\Messages\RecurrencePatternStructure\CalendarHelper.cs" />
     <Compile Include="Messaging\Messages\RecurrencePatternStructure\DailyRecurrencePatternStructure.cs" />

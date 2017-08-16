@@ -1,4 +1,4 @@
-/* Copyright (C) 2012-2016 ROM Knowledgeware. All rights reserved.
+/* Copyright (C) 2012-2017 ROM Knowledgeware. All rights reserved.
  * 
  * You can redistribute this program and/or modify it under the terms of
  * the GNU Lesser Public License as published by the Free Software Foundation,
@@ -720,6 +720,8 @@ namespace PSTFileFormat
                     {
                         case FolderItemTypeName.Appointment:
                             return new CalendarFolder(node);
+                        case FolderItemTypeName.Note:
+                            return new MailFolder(node);
                         default:
                             return new PSTFolder(node);
                     }
