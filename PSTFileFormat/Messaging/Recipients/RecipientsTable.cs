@@ -1,4 +1,4 @@
-/* Copyright (C) 2012-2016 ROM Knowledgeware. All rights reserved.
+/* Copyright (C) 2012-2019 ROM Knowledgeware. All rights reserved.
  * 
  * You can redistribute this program and/or modify it under the terms of
  * the GNU Lesser Public License as published by the Free Software Foundation,
@@ -17,7 +17,6 @@ namespace PSTFileFormat
     {
         public RecipientsTable(HeapOnNode heap, SubnodeBTree subnodeBTree) : base(heap, subnodeBTree)
         {
-
         }
 
         public MessageRecipient GetRecipient(int rowIndex)
@@ -25,8 +24,11 @@ namespace PSTFileFormat
             MessageRecipient result = new MessageRecipient();
             result.DisplayName = GetStringProperty(rowIndex, PropertyID.PidTagDisplayName);
             result.EmailAddress = GetStringProperty(rowIndex, PropertyID.PidTagEmailAddress);
-            RecipientFlags recipientFlags = (RecipientFlags)GetInt32Property(rowIndex, PropertyID.PidTagRecipientFlags);
-            result.IsOrganizer = ((recipientFlags & RecipientFlags.MeetingOrganizer) > 0);
+            if (ContainsPropertyColumn(PropertyID.PidTagRecipientFlags, PropertyTypeName.PtypInteger32))
+            {
+                RecipientFlags recipientFlags = (RecipientFlags)GetInt32Property(rowIndex, PropertyID.PidTagRecipientFlags);
+                result.IsOrganizer = ((recipientFlags & RecipientFlags.MeetingOrganizer) > 0);
+            }
             return result;
         }
 
